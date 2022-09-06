@@ -6,17 +6,22 @@
              xmlns:model="clr-namespace:MyWordle.Model"
              x:DataType="viewmodel:JogoViewModel">
 
-    <Grid RowDefinitions="*,Auto">
+    <Grid RowDefinitions="*,Auto"
+          Padding="10">
         <!--Area de Jogo-->
         <VerticalStackLayout BindableLayout.ItemsSource="{Binding Linhas}">
             <BindableLayout.ItemTemplate>
                 <DataTemplate x:DataType="model:LinhaDaPalavra">
-                    <HorizontalStackLayout BindableLayout.ItemsSource="{Binding Letras}">
+                    <HorizontalStackLayout 
+                        HorizontalOptions="Center" BindableLayout.ItemsSource="{Binding Letras}">
                         <BindableLayout.ItemTemplate>
                             <DataTemplate x:DataType="model:Letra">
-                                <Button Style="{DynamicResource cResource LetraBotao }"
-                                        Text="{Binding Input}"
-                                        BackgroundColor="{Binding Cor}"/>
+                                <Frame Style="{DynamicResource LetraFrame}"
+                                        BackgroundColor="{Binding Cor}">
+                                    <Label Text="{Binding Input}"
+                                           FontSize="Large"/>
+                                </Frame>
+
                             </DataTemplate>
                                           
                         </BindableLayout.ItemTemplate>
