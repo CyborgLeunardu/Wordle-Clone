@@ -1,0 +1,1 @@
+C:\Users\Usuario\Documents\GitHub\Wordle-Clone\MyWordle\MyWordle\MyWordle.csproj;x64

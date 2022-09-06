@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MyWordle</name>
+    </assembly>
+    <members>
+        <member name="P:MyWordle.Model.Letra.Cor">
+            <inheritdoc cref="F:MyWordle.Model.Letra.cor"/>
+        </member>
+        <member name="P:MyWordle.Model.Letra.Input">
+            <inheritdoc cref="F:MyWordle.Model.Letra.input"/>
+        </member>
+        <member name="P:MyWordle.ViewModel.JogoViewModel.Linhas">
+            <inheritdoc cref="F:MyWordle.ViewModel.JogoViewModel.linhas"/>
+        </member>
+        <member name="F:MyWordle.ViewModel.JogoViewModel.entrarCommand">
+            <summary>The backing field for <see cref="P:MyWordle.ViewModel.JogoViewModel.EntrarCommand"/>.</summary>
+        </member>
+        <member name="P:MyWordle.ViewModel.JogoViewModel.EntrarCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:MyWordle.ViewModel.JogoViewModel.Entrar"/>.</summary>
+        </member>
+        <member name="F:MyWordle.ViewModel.JogoViewModel.entrarLetraCommand">
+            <summary>The backing field for <see cref="P:MyWordle.ViewModel.JogoViewModel.EntrarLetraCommand"/>.</summary>
+        </member>
+        <member name="P:MyWordle.ViewModel.JogoViewModel.EntrarLetraCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:MyWordle.ViewModel.JogoViewModel.EntrarLetra(System.Char)"/>.</summary>
+        </member>
+    </members>
+</doc>

@@ -6,11 +6,27 @@ namespace MyWordle.ViewModel
 {
     public partial class JogoViewModel : ObservableObject
     {
-        private int linhaIndex;
-        private int colunaIndex;
+        int linhaIndex;
+        int colunaIndex;
+        char[] respostaCorreta;
 
         [ObservableProperty]
         private LinhaDaPalavra[] linhas;
+
+        public JogoViewModel()
+        {
+            linhas = new LinhaDaPalavra[6]
+            {
+                new LinhaDaPalavra(),
+                new LinhaDaPalavra(),
+                new LinhaDaPalavra(),
+                new LinhaDaPalavra(),
+                new LinhaDaPalavra(),
+                new LinhaDaPalavra()
+            };
+
+            respostaCorreta = "codes".ToCharArray();
+        }
 
         [RelayCommand]
         public void Entrar()
