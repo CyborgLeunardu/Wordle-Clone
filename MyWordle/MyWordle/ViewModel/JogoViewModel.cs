@@ -29,7 +29,7 @@ namespace MyWordle.ViewModel
                 new LinhaDaPalavra()
             };
 
-            respostaCorreta = "codes".ToCharArray();
+            respostaCorreta = "CODES".ToCharArray();
             TecladoLinha1 = "QWERTYUIOP".ToCharArray();
             TecladoLinha2 = "ASDFGHJKL".ToCharArray();
             TecladoLinha3 = "<ZXCVBNM>".ToCharArray();
@@ -41,22 +41,21 @@ namespace MyWordle.ViewModel
             if (colunaIndex != 5)
                 return;
 
-            var ehValido = true;
+            var ehValido = Linhas[linhaIndex].Validar(respostaCorreta);
 
             if (ehValido)
             {
-                if (linhaIndex == 5)
-                {
-                    //TERMINAR JOGO
-                }
-                else
-                {
-                    linhaIndex++;
-                    colunaIndex = 0;
-                }
+                Application.Current.MainPage.DisplayAlert("Você venceu!", "Você é muito inteligente!!", "Ok");
             }
-            linhaIndex = 0;
-            colunaIndex = 0;
+            if (linhaIndex == 5)
+            {
+                Application.Current.MainPage.DisplayAlert("Você perdeu!", "Acabaram suas tentativas!!", "Ok");
+            }
+            else
+            {
+                linhaIndex++;
+                colunaIndex = 0;
+            }
         }
 
         [RelayCommand]
@@ -65,10 +64,15 @@ namespace MyWordle.ViewModel
             if (letra == '>')
             {
                 Entrar();
+                return;
             }
 
             if (letra == '<')
             {
+                if (colunaIndex == 0)
+                    return;
+                colunaIndex--;
+                linhas[linhaIndex].Letras[colunaIndex].Input = ' ';
                 return;
             }
 

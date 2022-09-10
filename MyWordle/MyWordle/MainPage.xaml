@@ -20,9 +20,11 @@
                         <BindableLayout.ItemTemplate>
                             <DataTemplate x:DataType="model:Letra">
                                 <Frame Style="{DynamicResource LetraFrame}"
-                                        BackgroundColor="White">
+                                        BackgroundColor="{Binding Cor}">
                                     <Label Text="{Binding Input}"
-                                           FontSize="Large"/>
+                                           FontSize="36"
+                                           HorizontalOptions="Center"
+                                           />
                                 </Frame>
 
                             </DataTemplate>
