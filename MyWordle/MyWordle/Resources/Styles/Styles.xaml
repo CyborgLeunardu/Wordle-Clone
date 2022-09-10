@@ -47,8 +47,8 @@
 
     <Style x:Key="LetraBotao" TargetType="Button">
         <Setter Property="TextColor" Value="White" />
-        <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}" />
-        <Setter Property="FontFamily" Value="OpenSansRegular"/>
+        <Setter Property="BackgroundColor" Value="Transparent" /> 
+        <Setter Property="FontFamily" Value="OpenSansRegular"/> 
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="CornerRadius" Value="8"/>
         <Setter Property="BorderColor" Value="LightGray"/>
@@ -173,7 +173,7 @@
     </Style>
 
     <Style TargetType="Label">
-        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource Gray900}, Dark={StaticResource White}}" />
+        <Setter Property="TextColor" Value="{AppThemeBinding Light={StaticResource White}, Dark={StaticResource White}}" />
         <Setter Property="FontFamily" Value="OpenSansRegular" />
         <Setter Property="FontSize" Value="14" />
         <Setter Property="VisualStateManager.VisualStateGroups">
